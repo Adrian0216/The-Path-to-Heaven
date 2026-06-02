@@ -1,0 +1,300 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Path to Heaven | A Guide Based on Jesus' Words</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        heavenly: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+        }
+        /* Hide scrollbar for clean look in tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-heavenly-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-dove text-heavenly-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-heavenly-900">The Heavenly Guide</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#why" class="text-gray-600 hover:text-heavenly-600 transition font-medium">Why</a>
+                    <a href="#how" class="text-gray-600 hover:text-heavenly-600 transition font-medium">How</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-heavenly-600 transition font-medium">Benefits</a>
+                    <a href="#verses" class="text-gray-600 hover:text-heavenly-600 transition font-medium">Jesus' Words</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-heavenly-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#why" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-heavenly-600 hover:bg-gray-50">Why</a>
+                <a href="#how" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-heavenly-600 hover:bg-gray-50">How</a>
+                <a href="#benefits" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-heavenly-600 hover:bg-gray-50">Benefits</a>
+                <a href="#verses" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-heavenly-600 hover:bg-gray-50">Jesus' Words</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-in-section">
+            <span class="text-heavenly-600 font-semibold tracking-wider uppercase text-sm mb-4 block">A Journey of Faith</span>
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-heavenly-900 mb-6 leading-tight">
+                How to go to Heaven
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-10 max-w-2xl mx-auto font-light">
+                A simple, comprehensive guide based directly on the words and teachings of Jesus Christ.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#how" class="bg-heavenly-600 hover:bg-heavenly-500 text-white font-medium py-3 px-8 rounded-full transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Show me the way
+                </a>
+                <a href="#why" class="bg-white text-heavenly-700 font-medium py-3 px-8 rounded-full transition shadow hover:shadow-md border border-heavenly-100">
+                    Why do I need this?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY Section -->
+    <section id="why" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Why Do We Need Heaven?</h2>
+                <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Understanding the separation between humanity and God helps us understand the profound need for a Savior.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 fade-in-section">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-red-500 mb-6">
+                        <i class="fa-solid fa-heart-crack text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">The Problem: Separation</h3>
+                    <p class="text-gray-600 mb-4">God is perfect and holy. Humanity, by nature and choice, does wrong (sin). This imperfection creates a natural separation between us and a perfect God.</p>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-red-400 text-sm italic text-gray-700">
+                        "For the Son of Man has come to save that which was lost." <br><span class="font-semibold">— Jesus (Matthew 18:11)</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 fade-in-section" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-heavenly-100 rounded-full flex items-center justify-center text-heavenly-600 mb-6">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">The Motive: Incredible Love</h3>
+                    <p class="text-gray-600 mb-4">Despite our flaws, God loves humanity deeply. He didn't want the separation to be permanent. Heaven is simply the state of being reunited with our Creator.</p>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-heavenly-400 text-sm italic text-gray-700">
+                        "For God so loved the world that He gave His only begotten Son..." <br><span class="font-semibold">— Jesus (John 3:16)</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition border border-gray-100 fade-in-section" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-gold-100 rounded-full flex items-center justify-center text-gold-500 mb-6">
+                        <i class="fa-solid fa-bridge-water text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">The Solution: The Bridge</h3>
+                    <p class="text-gray-600 mb-4">Because we couldn't reach God on our own, God came down to us. Jesus acts as the bridge over the gap of sin, paying the price so we can cross over freely.</p>
+                    <div class="bg-white p-4 rounded-lg border-l-4 border-gold-400 text-sm italic text-gray-700">
+                        "I am the way, the truth, and the life. No one comes to the Father except through Me." <br><span class="font-semibold">— Jesus (John 14:6)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW Section (Interactive Stepper) -->
+    <section id="how" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">How to Go to Heaven</h2>
+                <div class="w-24 h-1 bg-heavenly-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">According to Jesus, it's not about being "good enough" or doing enough religious deeds. It is about a relationship. Here is the path He laid out.</p>
+            </div>
+
+            <!-- Interactive Stepper -->
+            <div class="fade-in-section bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+                <!-- Tabs -->
+                <div class="flex overflow-x-auto no-scrollbar border-b border-slate-700" id="step-tabs">
+                    <button class="step-btn active flex-1 py-4 px-6 text-center font-medium border-b-2 border-heavenly-500 text-heavenly-400 bg-slate-800/50 transition whitespace-nowrap" data-target="step1">
+                        1. Acknowledge & Repent
+                    </button>
+                    <button class="step-btn flex-1 py-4 px-6 text-center font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition whitespace-nowrap" data-target="step2">
+                        2. Believe in Him
+                    </button>
+                    <button class="step-btn flex-1 py-4 px-6 text-center font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition whitespace-nowrap" data-target="step3">
+                        3. Be Born Again
+                    </button>
+                    <button class="step-btn flex-1 py-4 px-6 text-center font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition whitespace-nowrap" data-target="step4">
+                        4. Follow Him
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="p-8 md:p-12 relative min-h-[350px]">
+                    <!-- Step 1 -->
+                    <div id="step1" class="step-content absolute inset-0 p-8 md:p-12 opacity-100 transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-white">Acknowledge & Repent</h3>
+                                <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                    The first step is humility. We must admit that we are broken and need saving. "Repentance" simply means changing your mind—turning away from doing life your own way and turning toward God. It’s asking for forgiveness.
+                                </p>
+                                <div class="bg-slate-700/50 p-5 rounded-xl border-l-4 border-heavenly-500">
+                                    <p class="text-lg italic font-serif text-slate-200">"Repent, for the kingdom of heaven is at hand."</p>
+                                    <p class="mt-2 text-heavenly-400 font-semibold">— Matthew 4:17</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex flex-shrink-0 w-48 h-48 bg-slate-700 rounded-full items-center justify-center border-4 border-slate-600">
+                                <i class="fa-solid fa-person-walking-arrow-loop-left text-6xl text-heavenly-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div id="step2" class="step-content absolute inset-0 p-8 md:p-12 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-white">Believe in Jesus</h3>
+                                <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                    Belief isn't just knowing facts in your head; it means to **trust** or **rely on**. Jesus taught that salvation comes simply by placing your absolute trust in Him and what He did on the cross to pay for your sins.
+                                </p>
+                                <div class="bg-slate-700/50 p-5 rounded-xl border-l-4 border-heavenly-500">
+                                    <p class="text-lg italic font-serif text-slate-200">"Most assuredly, I say to you, he who believes in Me has everlasting life."</p>
+                                    <p class="mt-2 text-heavenly-400 font-semibold">— John 6:47</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex flex-shrink-0 w-48 h-48 bg-slate-700 rounded-full items-center justify-center border-4 border-slate-600">
+                                <i class="fa-solid fa-cross text-6xl text-heavenly-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div id="step3" class="step-content absolute inset-0 p-8 md:p-12 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-white">Be Born Again (Receive the Spirit)</h3>
+                                <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                    When you believe, Jesus says something supernatural happens: a spiritual rebirth. God’s Spirit comes to live inside you. You don't have to earn this; it is a free gift received the moment you place your faith in Him.
+                                </p>
+                                <div class="bg-slate-700/50 p-5 rounded-xl border-l-4 border-heavenly-500">
+                                    <p class="text-lg italic font-serif text-slate-200">"Most assuredly, I say to you, unless one is born again, he cannot see the kingdom of God."</p>
+                                    <p class="mt-2 text-heavenly-400 font-semibold">— John 3:3</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex flex-shrink-0 w-48 h-48 bg-slate-700 rounded-full items-center justify-center border-4 border-slate-600">
+                                <i class="fa-solid fa-seedling text-6xl text-heavenly-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div id="step4" class="step-content absolute inset-0 p-8 md:p-12 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <div class="flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1">
+                                <h3 class="text-3xl font-bold mb-4 text-white">Follow Him (The Result)</h3>
+                                <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                                    Good works do not *get* you into heaven. However, once you are saved and born again, your life begins to change. Following Jesus, loving others, and obeying Him becomes the natural evidence that you are truly headed to heaven.
+                                </p>
+                                <div class="bg-slate-700/50 p-5 rounded-xl border-l-4 border-heavenly-500">
+                                    <p class="text-lg italic font-serif text-slate-200">"My sheep hear My voice, and I know them, and they follow Me."</p>
+                                    <p class="mt-2 text-heavenly-400 font-semibold">— John 10:27</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex flex-shrink-0 w-48 h-48 bg-slate-700 rounded-full items-center justify-center border-4 border-slate-600">
+                                <i class="fa-solid fa-shoe-prints text-6xl text-heavenly-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS Section -->
+    <section id="benefits" class="py-20 bg-heavenly-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">The Benefits of Heaven</h2>
+                <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">What actually awaits us? Jesus and the scriptures describe a place beyond our greatest imagination.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:-translate-y-2 transition-transform duration-300 fade-in-section">
+                    <div class="text-gold-500 mb-4"><i class="fa-solid fa-house-chimney text-4xl"></i></div>
+                    <h3 class="text-xl font-bold mb-2">A Prepared Place</h3>
+                    <p class="text-gray-600 text-sm mb-4">Heaven is not a state of mind; it is a real place that Jesus has specifically prepared for you.</p>
+                    <p class="text-xs text-gray-500 italic">"In My Father’s house are many mansions... I go to prepare a place for you." (John 14:2)</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md hover:-translate-y-2 transition-transform duration-300 fade-in-section" style="transition-delay: 100ms;">
+                    <div class="text-heavenly-500 mb-4
